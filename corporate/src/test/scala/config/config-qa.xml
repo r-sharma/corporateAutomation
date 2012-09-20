@@ -3,8 +3,8 @@
     <userEmail>p.kumar@syncapse.com</userEmail>
     <userPwd>Sync!234</userPwd>
 
-    <userDB>guru</userDB>
-    <passwordDB>scalatest</passwordDB>
+    <userDB>root</userDB>
+    <passwordDB>Password1</passwordDB>
     <mysqlDB>192.168.1.90</mysqlDB>
     <datasource>mysql</datasource>
 </config>

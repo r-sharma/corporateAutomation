@@ -21,25 +21,18 @@ class Login extends ScalaTestCommon {
     info("As a valid user")
     info("I should be able to login to the application successfully")
 
-    ignore("Login with valid credentials") {
+    scenario("Login with valid credentials", FirstTag) {
       given("I am on login page")
       when("I enter valid user credentials and click login")
       then("I should be logged in successfully")
       assert(loginpage.login(commonfuncs.ReadConf("userEmail"), commonfuncs.ReadConf("userPwd")))
     }
 
-    ignore("Login with invalid credentials") {
+    scenario("Login with invalid credentials") {
         given("I am on login page")
         when("I enter invalid user credentials and click login")
         then("I should not be logged in")
         assert(loginpage.login(commonfuncs.ReadConf("userEmail"), "inavlidPwd"))
-    }
-
-    ignore("Login with valid credentials1") {
-      given("I am on login page")
-      when("I enter valid user credentials and click login")
-      then("I should be logged in successfully")
-      assert(loginpage.login(commonfuncs.ReadConf("userEmail"), commonfuncs.ReadConf("userPwd")))
     }
   }
 
