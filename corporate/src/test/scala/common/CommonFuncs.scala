@@ -8,8 +8,10 @@ import org.scalatest.Tag
 import org.openqa.selenium._
 import org.openqa.selenium.firefox.FirefoxDriver
 import org.joda.time.DateTime
+import java.sql.{ResultSet, DriverManager, Connection}
 
 object FirstTag extends Tag("FirstTag")
+object SqlConn extends Tag("SqlConn")
 
 class CommonFuncs {
 
@@ -50,6 +52,19 @@ class CommonFuncs {
   def CloseBrowser(driver: WebDriver){
     driver.close()
 
+  }
+
+  def DBConnection(username : String, password : String, database : String, dbLocation : String ) : Connection = {
+    val conn_str = "jdbc:mysql://"+dbLocation+"/"+database+"?user="+username+"&password="+password
+    //classOf[com.mysql.jdbc.Driver]
+    val conn = DriverManager.getConnection(conn_str)
+    conn
+  }
+
+  def FetchingData(conn : Connection, query : String ) : ResultSet = {
+    val statement = conn.createStatement(ResultSet.TYPE_FORWARD_ONLY, ResultSet.CONCUR_READ_ONLY)
+    val rs = statement.executeQuery(query)
+    rs
   }
 
 }
