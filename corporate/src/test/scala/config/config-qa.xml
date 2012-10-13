@@ -1,6 +1,6 @@
 <config>
-    <platformUrl>https://platform.syncapse-qa.com</platformUrl>
-    <userEmail>p.kumar@syncapse.com</userEmail>
+    <platformUrl>https://manage.syncapse-demo.com/</platformUrl>
+    <userEmail>r.sharma@syncapse.com</userEmail>
     <userPwd>Sync!234</userPwd>
 
     <userDB>root</userDB>

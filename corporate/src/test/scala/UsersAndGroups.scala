@@ -8,7 +8,7 @@ class UsersAndGroups extends ScalaTestCommon {
   val commonfuncs = new CommonFuncs()
   val driver: WebDriver = commonfuncs.LaunchBrowser()
   val loginpage = new LoginPage(driver, commonfuncs.ReadConf("platformUrl"))
-  val adminpage = new AdminPage(driver)
+  val usersAndGroupspage = new UsersAndGroupsPage(driver)
 
   override def beforeAll() {
     loginpage.navigate()
@@ -25,9 +25,9 @@ class UsersAndGroups extends ScalaTestCommon {
     scenario("Create a valid new user", FirstTag) {
       given("I am already logged in")
       when("I navigate to Admin page")
-      adminpage.navigate()
-      adminpage.CreateUser()
-      then("I should be logged in successfully")
+      usersAndGroupspage.navigate()
+      usersAndGroupspage.CreateUser()
+      then("User should be created successfully")
       assert(1 === 1)
     }
   }

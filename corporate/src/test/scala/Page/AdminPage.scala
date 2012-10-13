@@ -2,14 +2,15 @@ package Page
 
 import common._
 import org.openqa.selenium.{WebDriver, By}
+import java.util.concurrent.TimeUnit
 
-class AdminPage(driver: WebDriver) {
+class UsersAndGroupsPage(driver: WebDriver) {
 
   val commonfuncs = new CommonFuncs()
 
   def navigate() {
     driver.findElement(By.linkText("Admin")).click()
-    commonfuncs.WaitUntilElementPresent(120, driver, "//a[@id='new-user']")
+    //commonfuncs.WaitUntilElementPresent(120, driver, "//a[@id='new-user']")
   }
 
   def CreateUser() : Boolean = {
