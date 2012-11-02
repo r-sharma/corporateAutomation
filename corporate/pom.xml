@@ -162,6 +162,7 @@
                 <junitxml>.</junitxml>
                 <filereports>WDF TestSuite.txt</filereports>
                 <parallel>true</parallel>
+                <!--<suites>Login</suites>-->
             </configuration>
             <executions>
                 <execution>

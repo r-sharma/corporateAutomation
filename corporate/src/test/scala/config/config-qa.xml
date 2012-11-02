@@ -1,5 +1,5 @@
 <config>
-    <platformUrl>https://manage.syncapse-demo.com/</platformUrl>
+    <platformUrl>https://manage.syncapse-qa.com/</platformUrl>
     <userEmail>r.sharma@syncapse.com</userEmail>
     <userPwd>Sync!234</userPwd>
 
