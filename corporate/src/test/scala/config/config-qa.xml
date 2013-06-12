@@ -1,7 +1,7 @@
 <config>
-    <platformUrl>https://manage.syncapse-qa.com/</platformUrl>
+    <platformUrl>https://manage.syncapse.com/</platformUrl>
     <userEmail>r.sharma@syncapse.com</userEmail>
-    <userPwd>Sync!234</userPwd>
+    <userPwd>Sync!2345</userPwd>
 
     <userDB>root</userDB>
     <passwordDB>Password1</passwordDB>
